@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const NewsCard = ({singleNews}) => {
-    const {image_url, title,image_ur,thumbnail_url} = singleNews;
+    const {id,image_url, title,image_ur,thumbnail_url} = singleNews;
     return (
         <div className="rounded-md shadow-md sm:w-96 dark:bg-gray-50 dark:text-gray-800">
         <div className="flex items-center justify-between p-3">
@@ -64,6 +65,10 @@ const NewsCard = ({singleNews}) => {
                     <span className="text-base font-semibold">leroy_jenkins72</span>Nemo ea quasi debitis impedit!
                 </p>
                 <input type="text" placeholder="Add a comment..." className="w-full py-0.5 dark:bg- border-none rounded text-sm pl-0 dark:text-gray-800" />
+
+                <div className='flex items-center justify-center text-center'>
+                    <Link  to={`/news-details/${id}`}><button className='btn btn-outline  mx-auto'>Read More</button></Link>
+                </div>
             </div>
         </div>
     </div>

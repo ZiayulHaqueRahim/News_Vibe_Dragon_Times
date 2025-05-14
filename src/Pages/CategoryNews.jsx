@@ -20,8 +20,8 @@ const CategoryNews = () => {
             const filterNews = data.filter((news)=>news.category_id == id);
             setCategoryNews(filterNews);
         };  
-    },[data,id])
-    console.log(data);
+    },[data,id]);
+   
     
     return (
         <div>
